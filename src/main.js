@@ -81,7 +81,10 @@ loadBtn.addEventListener("click", async event =>{
         message: "We're sorry, but you've reached the end of search results.",
         position: "topRight",
       })
-    }
+    } 
+    else{
+        showLoadMoreButton()
+    } 
     createGallery(data.hits)
     const { height: cardHeight } = document
     .querySelector(".gallery")
