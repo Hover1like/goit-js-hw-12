@@ -53,7 +53,8 @@ form.addEventListener("submit", async event => {
             position: "topRight",
       })
       }
-      showLoadMoreButton()
+      else{
+        showLoadMoreButton()}
     }
     catch(error) {
       iziToast.error({
@@ -69,6 +70,7 @@ form.addEventListener("submit", async event => {
 
 loadBtn.addEventListener("click", async event =>{
     page += 1
+    hideLoadMoreButton()
     showLoader()
     try{ 
     const data = await getImagesByQuery(searchQuery, page)
